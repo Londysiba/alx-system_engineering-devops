@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # a Bash script that stops 4-to_infinity_and_beyond process
 
-./4-to_infinity_and_beyond.sh &
+./4-to_infinity_and_beyond &
 
 bg_process_pid=$!
 

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Execute the 7-highlander script in the background
+
+./7-highlander &
+
+pid=$!
+
+sleep 10
+
+kill -15 $pid
