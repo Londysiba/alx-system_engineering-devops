@@ -7,6 +7,6 @@ bg_process_pid=$!
 
 read -p "Press enter to stop this script. The other process will keep running."
 
-kill $bg_process_pid
+kill -SIGTERM $bg_process_pid
 
 echo "Terminated"
