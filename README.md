@@ -1,2 +1,2 @@
 # Devops readme
-by Londeka
+by Londeka Dlamini
