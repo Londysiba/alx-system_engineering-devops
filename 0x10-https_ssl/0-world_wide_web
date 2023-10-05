@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Display information about subdomains
+func() {
+    local domain="$1"
+    local subdomains=("www" "lb-01" "web-01" "web-02")
+
+    for subdomain in "${subdomains[@]}"; do
+        if [ -n "$2" ]; then
+            subdomain="$2"
+        fi
+        result=$(dig "$subdomain.$domain" +short)
+        
+        if [ -n "$result" ]; then
+            echo "The subdomain $subdomain is a $result record and points to $subdomain.$domain"
+        else
+            echo "No DNS record found for $subdomain.$domain"
+        fi
+    done
+}
+
+func "$1" "$2"
